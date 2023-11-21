@@ -1,7 +1,12 @@
+.heading-28 {font-family: Sora;font-size: 28px;font-weight: 700;text-transform: capitalize;}
+.heading-20 {font-family: Sora;font-size: clamp(0.8rem, 0.6442rem + 0.6923vw, 1.25rem) !important;font-weight: 700;text-transform: capitalize;}
+.heading-18 {font-family: Sora;font-size: 16px !important;font-weight: 700;text-transform: capitalize;}
+
 .image-upload > label {pointer-events: inherit;}
 .image-upload > input {display: none;}
 .image-upload img {width: 40px;cursor: pointer;}
 
+.flexChildEqual > div {flex-grow: 1;flex-basis: 0;min-width: 0;}
 
 /*for gradiant color imaze wirte text*/
 .single-page-header:after, .single-page-header:before { 
@@ -251,6 +256,12 @@ Version: 1.1
 /*-----------------
 8. Custom Checkbox
 -----------------------*/
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: var(--secondary-clr);
+  transform: scale(1.4);
+}
+
 .cus-checkbox [type="checkbox"]:checked,
 .cus-checkbox [type="checkbox"]:not(:checked) {
   position: absolute;
@@ -417,44 +428,13 @@ html{font-size: 62.5%;}
 /*-----------------
 11.Ellipsis
 -----------------------*/
-.ellipsis-line1 {  
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.ellipsis-line2 {
-    width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-}
-.ellipsis-line3 {
-    width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-}
-.ellipsis-line4 {
-    width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-}
-.ellipsis-line5 {
-    width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-}
+.ellipsis-line1 {width: 100%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.ellipsis-line2 {width: 100%;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}
+.ellipsis-line3 {width: 100%;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;}
+.ellipsis-line4 {width: 100%;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 4;-webkit-box-orient: vertical;}
+.ellipsis-line5 {width: 100%;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;}
+.ellipsis-line6 {width: 100%;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 6;-webkit-box-orient: vertical;}
+
 
 /*-----------------
 12.Animation
@@ -523,7 +503,11 @@ html{font-size: 62.5%;}
 .accordion-plus[aria-expanded="true"]:before {
     transform: rotateZ(180deg);
 }
+.accordianArrow:after {content: "\ea57";font-family: boxicons!important;  font-weight: 500;float: right;color: var(--primary-clr);}
+.accordianArrow.collapsed:after {content: "\ea4a";}
 
+.accordianMinus:after {content: "\eb8d";font-family: boxicons!important;  font-weight: 500;float: right;color: var(--primary-clr);}
+.accordianMinus.collapsed:after {content: "\ebc1";color: var(--text-clr);}
 
 
 
